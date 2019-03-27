@@ -50,7 +50,7 @@ function existeGanhador(){
 			ganhador = letra;
 		} else if(a3 == letra && b2 == letra && c1 == letra){
 			ganhador = letra;
-		}
+		} 
 
 	}
 
@@ -62,21 +62,42 @@ function existeGanhador(){
 			$('#congratulations').addClass('active');
 			$('#congratulations').html("PARABÉNS!! O ganhador dessa partida foi: <span style='font-weight: bold; color: #000'>X</span>");
 
-		}
+		} 		
 
 		$("#reset").css("display", "block");
+		updatePlacar(ganhador);
+
+	} else if(a1 != '' && a2 != '' && a3 != '' && b1 != '' && b2 != '' && b3 != '' && c1 != '' && c2 != '' && c3 != ''){
+			$('#empate').addClass('active');
+			$('#empate').html("VISH :( DEU VELHA!!");
+
+			$("#reset").css("display", "block");
 
 	}
+
+		
+
+		
 
 }
 
 function jogarNovamente(){
 	$('.area').html('');
-	$('.area').attr('data-marcado', '');
+	$('.area').attr('data-marcador', '');
 
-	$("#congratulations").removeClass("active");
+	$("#congratulations, #empate").removeClass("active");
+	
 	$("#reset").css("display", "none");
 
+}
+
+function updatePlacar(obj) {
+
+	if( obj == "o") {
+		document.getElementById("o").innerHTML++;	
+	} else  if(obj == "x"){
+		document.getElementById("x").innerHTML++;	
+	}
 }
 
 nextPlayer();

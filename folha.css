@@ -1,6 +1,7 @@
 main {
 	width: 366px;
 	margin: auto;
+	font-family: 'Arial';
 }
 
 .area {
@@ -16,10 +17,10 @@ main {
 	clear: both;
 }
 
-#congratulations {
+#congratulations, #empate {
 	background-color: green;
 	width: 100%;
-	height: 50px;
+	height: auto;
 	font-size: 24px;
 	color: #FFF;
 	padding: 5px;
@@ -29,8 +30,10 @@ main {
 	transform: translate3d(0,0,40px,0);
 	transition: .8s ease;
 }
-
-#congratulations.active {
+#empate {
+	background-color: red !important;
+}
+#congratulations.active, #empate.active {
 	opacity: 1;
 	transform: translate3d(0,0,0);
 }
@@ -41,4 +44,16 @@ main {
 	cursor: pointer;
 	display: none;
 	margin-top: 10px;
+}
+.historico {
+	display: flex;
+	justify-content: space-around;
+
+	padding:5px;
+}
+.next-player {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	text-align: center;
 }

@@ -6,9 +6,19 @@
 	</head>
 	<body>
 		<main>
-			<div class="next-player">
-				<h3>Próximo jogador:</h3>
-				<img src="" alt="" height="50">
+			<div class="historico">
+				<div class="next-player">
+					<strong>PRÓXIMO</strong> <br>
+					<img src="" alt="" height="50">
+				</div>
+				<div class="ganhadores">
+					<strong>PONTUAÇÃO</strong> <br>
+					<img src="o.png" alt="" height="30"> -
+					<span style="font-size:40px" id="o">0</span>
+					<hr>
+					<img src="x.png" alt="" height="30"> -
+					<span style="font-size:40px" id="x">0</span>
+				</div>
 			</div>
 			<hr>
 			<div class="area a1" data-marcador=""></div>
@@ -24,6 +34,7 @@
 			<div class="area c3" data-marcador=""></div>
 			<div class="formatador"></div>
 			<div id="congratulations"></div>
+			<div id="empate"></div>
 			<button onclick="jogarNovamente();" id="reset">Jogar Novamente</button>
 		</main>
 
