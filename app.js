@@ -64,11 +64,18 @@ function existeGanhador(){
 
 		}
 
-		setTimeout(function(){
-			$('.area').html('');
-			$('.area').attr('data-marcado', '');
-		}, 1500);
+		$("#reset").css("display", "block");
+
 	}
+
+}
+
+function jogarNovamente(){
+	$('.area').html('');
+	$('.area').attr('data-marcado', '');
+
+	$("#congratulations").removeClass("active");
+	$("#reset").css("display", "none");
 
 }
 
